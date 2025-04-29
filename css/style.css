@@ -8,6 +8,7 @@
 :root {
     --primary-color: #0366d6;
     --hero-color:#7b2d43;
+    --secondary-color: #984b43;
     --text-color: #24292e;
     --secondary-text: #586069;
     --border-color: #e1e4e8;
@@ -62,6 +63,10 @@ a {
     color: var(--primary-color);
     text-decoration: none;
     transition: color 0.2s ease;
+}
+
+a.secondary-link {
+    color: var(--secondary-color); /* or any color you want */
 }
 
 a:hover {
@@ -150,7 +155,7 @@ nav ul li a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     transition: width 0.3s ease;
 }
 
