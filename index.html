@@ -1,120 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Personal website of Yoshiaki Sato" />
-  <title>Yoshiaki Sato | Website</title>
-  <!-- Bootstrap CSS -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-  />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoshi Sato - Personal Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body class="bg-light text-dark">
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Yoshiaki Sato</a>
-      <button class="navbar-toggler" type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navbarContent" 
-        aria-controls="navbarContent" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li> -->
-          <li class="nav-item"><a class="nav-link" href="assets/Yoshiaki_Sato_CV_2025.pdf" target="_blank">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
-        </ul>
-      </div>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <div class="profile-text">
+                    <h1>Yoshi Sato</h1>
+                    <p class="title">Student Researcher</p>
+                    <p class="institution">Waseda University</p>
+                    <p class="tagline">Advancing Confidential Computing to Build a More Trusted Cloud.</p>
+                    <div class="social-links">
+                        <a href="mailto:yoshisato@kasahara.cs.waseda.ac.jp" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/yoshiisato" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/yoshi-sato" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <!-- <a href="https://twitter.com/yourusername" title="Twitter"><i class="fab fa-twitter"></i></a> -->
+                        <!-- <a href="https://scholar.google.com/citations?user=yourid" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> -->
+                    </div>
+                </div>
+                <img src="images/fuji_pfp.jpg" alt="Profile Photo" class="profile-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <!-- <li><a href="#publications">Publications</a></li> -->
+                    <!-- <li><a href="#projects">Projects</a></li> -->
+                    <!-- <li><a href="#teaching">Teaching</a></li> -->
+                    <li><a href="files/Yoshiaki_Sato_CV_2025.pdf" target="_blank">CV</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I'm a junior in Computer Science & Communications Engineering at <b>Waseda University</b>. 
+                    My research focuses on the intersection of <b>confidential computing</b>, <b>trusted execution</b>, 
+                    and <b>distributed systems</b>.
+                    Currently I split my time between:
+                </p>
+                <!-- <p>
+                    I received my [highest degree] in [field] from [university] in [year]. Prior to 
+                    that, I completed my [previous degree] at [previous institution].
+                </p> -->
+                <h3>Currently, I am a member of:</h3>
+                <ul>
+                    <li>
+                        <b>Kimura-Kasahara Laboratory, Green Computing Systems Center</b> - Securing cloud workloads
+                        while making them more flexible with IO devices.
+                    </li>
+                    <li>
+                        <b>Internet Initiative Japan (IIJ) Research Laboratory</b> - In collaboration with Imperial College London's LSDS Group,
+                        applying serverless workloads to confidential computing infrastructures.
+                    </li>
+                </ul>
+                <h3>Links:</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.kasahara.cs.waseda.ac.jp/index.html.en">Kimura-Kasahara Laboratory</a>
+                    </li>
+                    <li>
+                        <a href="https://www.waseda.jp/inst/gcs/en/">Green Computing Systems Center</a>
+                    </li>
+                    <li>
+                        <a href="https://www.iijlab.net/en/">IIJ Research Laboratory</a>
+                    </li>
+                    <li>
+                        <a href="https://lsds.doc.ic.ac.uk/">Large Scale Data & Systems Group</a> (not a member)
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="research">
+                <h2>Research</h2>
+                <p>
+                    My research interests lie at the intersection of confidential computing and its many applications (distributed systems, machine learning, bioinformatics, etc.). I am 
+                    particularly interested in exploring how confidential VMs can be used for privacy-preserving multi-party computation platforms.
+                </p>
+                
+                <h3>Current Research</h3>
+                <ol>
+                    <li>
+                        <b>GPU Passthroughs for TDs</b> - Measuring DMA-buffer overheads to unlock high-performance accelerated workloads inside Intel TDX VMs.
+                        Intel TDX, NVIDIA GPU, CUDA.
+                    </li>
+                    <li>
+                        <b>Serverless Confidential Containers</b> - Researching Kubernetes serverless deployments on confidential computing infrastructure. 
+                        K8s, Knative, Confidential Containers (CoCo), Kata Container, Intel TDX, AMD SEV-SNP.
+                    </li>
+                </ol>
+                
+                <h3>Research Interests</h3>
+                <ul>
+                    <li>Confidential Computing</li>
+                    <li>Trusted Execution</li>
+                    <li>Privacy-Preserving Computation for Bioinformatics</li>
+                    <li>Cyber-Physical Systems</li>
+                </ul>
+            </section>
+            
+            <!-- <section id="publications">
+                <h2>Publications</h2>
+                <ul class="publications-list">
+                    <li>
+                        <div class="pub-title">[Title of Your Publication] (2023)</div>
+                        <div class="pub-authors">[Your Name], [Co-author One], [Co-author Two]</div>
+                        <div>[Journal or Conference Name]. <a href="#">[PDF]</a> <a href="#">[Code]</a> <a href="#">[DOI]</a></div>
+                    </li>
+                    <li>
+                        <div class="pub-title">[Another Publication Title] (2022)</div>
+                        <div class="pub-authors">[Your Name], [Co-author Three]</div>
+                        <div>[Journal or Conference Name]. <a href="#">[PDF]</a> <a href="#">[Code]</a> <a href="#">[DOI]</a></div>
+                    </li>
+                    <li>
+                        <div class="pub-title">[Yet Another Publication] (2021)</div>
+                        <div class="pub-authors">[Co-author Four], [Your Name], [Co-author Five]</div>
+                        <div>[Journal or Conference Name]. <a href="#">[PDF]</a> <a href="#">[Code]</a> <a href="#">[DOI]</a></div>
+                    </li>
+                </ul>
+            </section> -->
+            
+            <!-- <section id="projects">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>[Project Name One]</h3>
+                        <p class="project-date">2022 - Present</p>
+                        <p>Brief description of the project, including its purpose, your role, 
+                        technologies used, and outcomes or current status.</p>
+                        <a href="#" class="project-link">Project Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <h3>[Project Name Two]</h3>
+                        <p class="project-date">2021 - 2022</p>
+                        <p>Brief description of the project, including its purpose, your role, 
+                        technologies used, and outcomes or current status.</p>
+                        <a href="#" class="project-link">Project Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <h3>[Project Name Three]</h3>
+                        <p class="project-date">2020 - 2021</p>
+                        <p>Brief description of the project, including its purpose, your role, 
+                        technologies used, and outcomes or current status.</p>
+                        <a href="#" class="project-link">Project Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section> -->
+            
+            <!-- <section id="teaching">
+                <h2>Teaching</h2>
+                <div class="teaching-entries">
+                    <div class="teaching-entry">
+                        <h3>[Course Name]</h3>
+                        <p class="teaching-role">[Your Role], [Semester Year]</p>
+                        <p>Brief description of the course, your responsibilities, and any notable 
+                        achievements or innovations in your teaching approach.</p>
+                    </div>
+                    <div class="teaching-entry">
+                        <h3>[Another Course]</h3>
+                        <p class="teaching-role">[Your Role], [Semester Year]</p>
+                        <p>Brief description of the course, your responsibilities, and any notable 
+                        achievements or innovations in your teaching approach.</p>
+                    </div>
+                </div>
+            </section> -->
+            
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>
+                    Feel free to reach out if you have questions about my research, are interested 
+                    in collaboration, or want to connect.
+                </p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:yoshisato@kasahara.cs.waseda.ac.jp">yoshisato@kasahara.cs.waseda.ac.jp</a></p>
+                    <p><i class="fas fa-building"></i> Green Computing Systems Research Center (Bldg. No. 40)</p>
+                    <p><i class="fas fa-map-marker-alt"></i> School of Fundamental Science and Engineering, Waseda University, Shinjuku, Tokyo, Japan</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2025 Yoshiaki Sato. All rights reserved.</p>
+            <p>Last updated: April 2025</p>
+        </footer>
     </div>
-  </nav>
-  
-  <header class="container py-5">
-    <div class="row">
-      <div class="col-md-8 mx-auto text-center">
-        <img src="assets/background.jpg" alt="Profile Photo" class="rounded-circle mb-3" width="150" height="150"/>
-        <h1 class="fw-bold">Yoshiaki Sato</h1>
-        <p class="lead">Waseda University | 3rd Year Computer Science Major</p>
-        <a href="assets/Yoshiaki_Sato_CV_2025.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
-      </div>
-    </div>
-  </header>
 
-  <section class="container py-5">
-    <div class="row mb-4">
-      <div class="col-md-10 mx-auto">
-        <h2>About Me</h2>
-        <p>
-          I'm <b>Yoshiaki Sato</b>, a junior at Waseda University pursuing a degree in Computer Science and Communications Engineering. 
-          My interests center on the intersection of <b>secure computing, cybersecurity,</b> and deep learning.
-          I am engaged in project-based research under Professor Tatsuya Mori at the <a href="https://nsl.cs.waseda.ac.jp/" target="_blank">Network Security Lab</a>, with plans to become a full member next semester. 
-          I am also currently researching at <a href="https://www.iijlab.net/en/" target="_blank">Internet Initiative Japan (IIJ) Research Laboratory</a> as a RA, working on securing <b>confidential VMs</b>.
-          <br>
-          <br>
-          I've gained hands-on experience with AI frameworks, cloud platforms, and security tools through various projects and internships. 
-          You can learn more about my work, skill set, and background by <strong>downloading my resume</strong>. 
-          Beyond my academic pursuits, I co-founded <a href="https://www.kuma2024.tech/" target="_blank">Kuma Lab</a> to foster STEM research and innovation in Japan. 
-        </p>
-      </div>
-    </div>
-    
-    <div class="row g-4">
-      <div class="col-md-6">
-        <h3>Skills</h3>
-        <ul>
-          <li>Programming: C, Python</li>
-          <li>AI/ML: PyTorch, WandB, AWS Cloud Services (EC2, Sagemaker, etc.)</li>
-          <li>Cybersecurity: Basic network/web security, some pentesting tools</li>
-          <li>Malware Analysis: Ghidra, x64dbg</li>
-        </ul>
-      </div>
-      <div class="col-md-6">
-        <h3>Education</h3>
-        <p>B.S. in Computer Science and Communications Engineering (Expected 2026)  
-        Waseda University, Tokyo, Japan</p>
-        <p>High School Diploma Eastchester High School, Eastchester, New York</p>
-      </div>
-    </div>
-  </section>
-
-    <!-- On index.html, inside the main content -->
-    <section class="container py-5">
-        <h2>Featured Post</h2>
-        <div class="card">
-        <img src="assets/FGSM.png" class="featured-blog" alt="Featured Post">
-        <div class="card-body">
-            <h5 class="card-title">Understanding FGSM: A more intuitive Approach to Adversarial Attacks</h5>
-            <p class="card-text">Understand why machine learning models are so sensitive to subtle input changes through the lens of FGSM and high-dimensional geometry.</p>
-            <a href="https://medium.com/@yoshisauce/understanding-fgsm-a-more-intuitive-approach-to-adversarial-attacks-0e4d59f2f268" class="btn btn-primary" target="_blank">Read More</a>
-        </div>
-        </div>
-        <p class="mt-3">
-        <a href="blog.html">See all blog posts</a>
-        </p>
-    </section>
-  
-
-  <footer class="bg-dark text-light py-4 mt-5">
-    <div class="container text-center">
-      <p>© 2024 Yoshiaki Sato. All Rights Reserved.</p>
-      <p>
-        <a href="https://github.com/yoshiisato" class="text-light me-3" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/yoshi-sato/" class="text-light me-3" target="_blank">LinkedIn</a>
-        <a href="mailto:yoshis.ny@gmail.com" class="text-light">Email Me</a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
-  </script>
+    <script>
+        // Simple script to highlight the active navigation item
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('nav ul li a');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - 60) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href').substring(1) === current) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
