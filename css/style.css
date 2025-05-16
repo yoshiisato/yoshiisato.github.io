@@ -18,8 +18,8 @@
 
 [data-theme="dark"] {
     --primary-color: #58a6ff;
-    --hero-color: #f79bb8;
-    --secondary-color: #f79bb8;
+    --hero-color: #d2691e;      /* Orange Red / Dark Orange */
+    --secondary-color: #cd853f; /* Sandy Brown */
     --text-color: #c9d1d9;
     --secondary-text: #8b949e;
     --border-color: #30363d;
@@ -27,6 +27,12 @@
     --card-background: #161b22;
     --hover-color: #21262d;
 }
+
+/* I like:
+22d3ee
+fb923c
+4ade80
+*/
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
