@@ -251,6 +251,38 @@ main section {
     margin: 0.25rem 0;
 }
 
+/* News section */
+.news-list {
+    list-style: none;
+    margin: 1.5rem 0 0 0;
+}
+
+.news-list li {
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+    background-color: var(--card-background);
+    border-radius: 6px;
+    border-left: 3px solid var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+.news-list li:hover {
+    background-color: var(--hover-color);
+}
+
+.news-date {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.news-content {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
 /* Projects grid */
 .projects-grid {
     display: grid;
