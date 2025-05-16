@@ -36,6 +36,9 @@
                     <li><a href="https://docs.google.com/document/d/1owgEp-hhKZQoQfGhDG5RXD5B2s7SeAJfDv9PFeaNXBQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
             </nav>
         </header>
         
@@ -193,13 +196,82 @@
         
         <footer>
             <p>© 2025 Yoshiaki Sato. All rights reserved.</p>
-            <p>Last updated: May 9th 2025</p>
+            <p>Last updated: <span id="last-updated"></span></p>
         </footer>
     </div>
 
     <script>
-        // Simple script to highlight the active navigation item
+        // Auto-update timestamp
+        function updateLastModified() {
+            const lastUpdated = document.getElementById('last-updated');
+            const currentDate = new Date();
+            
+            // Format options for different styles - choose the one you prefer
+            
+            // Option 1: "May 9th, 2025" style (ordinal)
+            const options1 = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                timeZone: 'Asia/Tokyo'
+            };
+            let formattedDate = currentDate.toLocaleDateString('en-US', options1);
+            
+            // Add ordinal suffix (st, nd, rd, th)
+            const day = currentDate.getDate();
+            const suffix = ['th', 'st', 'nd', 'rd'][day % 10 > 3 ? 0 : (day % 100 - day % 10 !== 10) * day % 10];
+            formattedDate = formattedDate.replace(/(\d+),/, `$1${suffix},`);
+            
+            // Option 2: "2025-05-16" style (ISO format)
+            // const formattedDate = currentDate.toISOString().split('T')[0];
+            
+            // Option 3: "May 16, 2025 at 3:45 PM" style (with time)
+            // const formattedDate = currentDate.toLocaleString('en-US', {
+            //     year: 'numeric',
+            //     month: 'long',
+            //     day: 'numeric',
+            //     hour: 'numeric',
+            //     minute: '2-digit',
+            //     timeZone: 'Asia/Tokyo'
+            // });
+            
+            lastUpdated.textContent = formattedDate;
+        }
+        
+        // Dark mode toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const currentTheme = body.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        // Load saved theme on page load
         document.addEventListener('DOMContentLoaded', function() {
+            // Update timestamp
+            updateLastModified();
+            
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+                themeIcon.className = 'fas fa-moon';
+            }
+            
+            // Navigation scroll highlighting
             const sections = document.querySelectorAll('section');
             const navItems = document.querySelectorAll('nav ul li a');
             
@@ -208,7 +280,6 @@
                 
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
                     if (pageYOffset >= sectionTop - 60) {
                         current = section.getAttribute('id');
                     }
