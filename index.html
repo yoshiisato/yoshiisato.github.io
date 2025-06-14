@@ -20,8 +20,6 @@
                         <a href="mailto:yoshisato@kasahara.cs.waseda.ac.jp" title="Email" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
                         <a href="https://github.com/yoshiisato" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                         <a href="https://linkedin.com/in/yoshi-sato" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                        <!-- <a href="https://twitter.com/yourusername" title="Twitter"><i class="fab fa-twitter"></i></a> -->
-                        <!-- <a href="https://scholar.google.com/citations?user=yourid" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> -->
                     </div>
                 </div>
                 <img src="images/fuji_pfp.jpg" alt="Profile Photo" class="profile-image">
@@ -31,9 +29,6 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#news">News</a></li>
                     <li><a href="#research">Research</a></li>
-                    <!-- <li><a href="#publications">Publications</a></li> -->
-                    <!-- <li><a href="#projects">Projects</a></li> -->
-                    <!-- <li><a href="#teaching">Teaching</a></li> -->
                     <li><a href="https://docs.google.com/document/d/1owgEp-hhKZQoQfGhDG5RXD5B2s7SeAJfDv9PFeaNXBQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -46,41 +41,52 @@
         <main>
             <section id="about">
                 <h2>About Me</h2>
-                <p>
-                    I'm Yoshi, a student researcher investigating how confidential computing and hardware-based trust can reshape cloud infrastructures. 
-                    I'm currently a junior majoring in Computer Science & Communications Engineering at <b>Waseda University</b>, where I focus on secure systems research.
-                    My work lies at the intersection of <b>confidential computing</b>, <b>trusted execution environments</b>, and <b>distributed systems</b>.
-                </p>
-                <!-- <p>
-                    I received my [highest degree] in [field] from [university] in [year]. Prior to 
-                    that, I completed my [previous degree] at [previous institution].
-                </p> -->
-                <h3>I am a member of:</h3>
-                <ul>
-                    <li>
-                        <b>Kimura-Kasahara Laboratory, Green Computing Systems Center</b> - Securing cloud workloads
-                        while making them more useable and flexible with IO devices.
-                    </li>
-                    <li>
-                        <b>Internet Initiative Japan (IIJ) Research Laboratory</b> - In collaboration with Imperial College London's LSDS Group,
-                        applying serverless workloads to confidential computing infrastructures.
-                    </li>
-                </ul>
-                <h3>Links:</h3>
-                <ul>
-                    <li>
-                        <a href="https://www.kasahara.cs.waseda.ac.jp/index.html.en" target="_blank" rel="noopener noreferrer" class="secondary-link">Kimura-Kasahara Laboratory</a>
-                    </li>
-                    <li>
-                        <a href="https://www.waseda.jp/inst/gcs/en/" target="_blank" rel="noopener noreferrer" class="secondary-link">Green Computing Systems Center</a>
-                    </li>
-                    <li>
-                        <a href="https://www.iijlab.net/en/" target="_blank" rel="noopener noreferrer" class="secondary-link">IIJ Research Laboratory</a>
-                    </li>
-                    <li>
-                        <a href="https://lsds.doc.ic.ac.uk/" target="_blank" rel="noopener noreferrer" class="secondary-link">Large Scale Data & Systems Group</a>
-                    </li>
-                </ul>
+                <div class="about-intro">
+                    <p>
+                        I'm Yoshi, a student researcher investigating how <span class="highlight">confidential computing</span> and <span class="highlight">hardware-based trust</span> can reshape cloud infrastructures. 
+                    </p>
+                    <p>
+                        Currently a junior majoring in Computer Science & Communications Engineering at <b>Waseda University</b>, where I focus on secure systems research.
+                        My work lies at the intersection of <b>confidential computing</b>, <b>trusted execution environments</b>, and <b>distributed systems</b>.
+                    </p>
+                </div>
+
+                <h3 class="affiliations-title">Research Affiliations</h3>
+                <div class="affiliations-grid">
+                    <div class="affiliation-card waseda-card">
+                        <div class="affiliation-logo waseda-logo"></div>
+                        <div class="affiliation-content">
+                            <h4>Kasahara-Kimura Laboratory</h4>
+                            <p class="affiliation-subtitle">Green Computing Systems Center • Waseda University</p>
+                            <p class="affiliation-desc">Securing cloud workloads while making them more useable and flexible with IO devices.</p>
+                            <div class="affiliation-links">
+                                <a href="https://www.kasahara.cs.waseda.ac.jp/index.html.en" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> Lab Website
+                                </a>
+                                <a href="https://www.waseda.jp/inst/gcs/en/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> GCS Center
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="affiliation-card iij-card">
+                        <div class="affiliation-logo iij-logo"></div>
+                        <div class="affiliation-content">
+                            <h4>IIJ Research Laboratory</h4>
+                            <p class="affiliation-subtitle">In collaboration with Imperial College London's LSDS Group</p>
+                            <p class="affiliation-desc">Applying serverless workloads to confidential computing infrastructures for next-generation cloud security.</p>
+                            <div class="affiliation-links">
+                                <a href="https://www.iijlab.net/en/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> IIJ Lab
+                                </a>
+                                <a href="https://lsds.doc.ic.ac.uk/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> LSDS Group
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section id="news">
@@ -109,104 +115,87 @@
             
             <section id="research">
                 <h2>Research</h2>
-                <p>
-                    In a world where data is the new currency, trust and privacy are no longer optional—they're foundational. 
-                </p>
-                <p>
-                    I'm driven by the question: <i>How do we build cloud infrastructures that are not just fast and scalable, but fundamentally trustworthy?</i>
-                    <!-- At the intersection of hardware, software, and virtualization security lies a uniquely complex trust problem. My research addresses this through confidential computing and its real-world integration. -->
-                </p>
-
-                <p>
-                    At the intersection of hardware, software, and virtualization security lies a uniquely complex trust problem. My research addresses this through confidential computing and its real-world integration.
-                </p>
+                <div class="research-intro">
+                    <p>
+                        In a world where data is the new currency, trust and privacy are no longer optional—they're foundational. 
+                    </p>
+                    <p class="research-question">
+                        How do we build cloud infrastructures that are not just fast and scalable, but fundamentally trustworthy?
+                    </p>
+                    <p>
+                        At the intersection of hardware, software, and virtualization security lies a uniquely complex trust problem. My research addresses this through confidential computing and its real-world integration.
+                    </p>
+                </div>
                 
                 <h3>Current Research Projects</h3>
-                <ol>
-                    <li>
-                        <b>GPU Throughput Evaluations for CVMs</b> - Measuring GPU throughput overheads across different CVMs to understand I/O performance over different vendor HW. <br>
-                        <i>Keywords:</i> Intel TDX, NVIDIA GPU, CUDA.
-                    </li>
-                    <li>
-                        <b>Serverless Confidential Containers</b> - Researching Kubernetes serverless deployments on confidential computing infrastructure to enable privacy-perserving serverless cloud.<br>
-                        <i>Keywords:</i> K8s, Knative, Confidential Containers (CoCo), Kata Container, Intel TDX, AMD SEV-SNP.
-                    </li>
-                </ol>
                 
+                <!-- Featured Project -->
+                <div class="featured-project">
+                    <div class="featured-badge">
+                        <i class="fas fa-star"></i>
+                        Featured Project
+                    </div>
+                    <h4>Serverless Confidential Containers (SC2)</h4>
+                    <p>
+                        Leading research on Kubernetes serverless deployments on confidential computing infrastructure to enable privacy-preserving serverless cloud. 
+                        This project bridges the gap between modern cloud-native architectures and hardware-based security guarantees.
+                    </p>
+                    <p><b>Technologies:</b> K8s, Knative, Confidential Containers (CoCo), Kata Container, Intel TDX, AMD SEV-SNP</p>
+                    <div class="project-resources">
+                        <a href="https://www.iijlab.net/activities/seminars.html" class="resource-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-video"></i>
+                            Watch Presentation
+                        </a>
+                        <a href="files/iijlab-seminar-sc2-presentation.pdf" class="resource-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-file-pdf"></i>
+                            View Slides
+                        </a>
+
+                    </div>
+                </div>
+                
+                <!-- Other Projects -->
+                <div class="research-projects">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4 class="project-title">GPU Throughput Evaluations for CVMs</h4>
+                            <span class="project-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </span>
+                        </div>
+                        <p class="project-description">
+                            Measuring GPU throughput overheads across different CVMs to understand I/O performance over different vendor hardware. 
+                            This research aims to quantify the performance trade-offs when running GPU-accelerated workloads in confidential environments.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Intel TDX</span>
+                            <span class="tech-badge">NVIDIA GPU</span>
+                            <span class="tech-badge">CUDA</span>
+                        </div>
+                        <i class="fas fa-arrow-right expand-icon"></i>
+                    </div>
+                </div>
                 
                 <h3>Core Research Interests</h3>
-                <ul>
-                    <li>Confidential Computing</li>
-                    <li>Secure distributed systems using TEEs (e.g. anonymity networks, serverless)</li>
-                    <li>Privacy-preserving MPC using TEEs (for bioinformatics, federated learning)</li>
-                </ul>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <strong>Confidential Computing</strong>
+                        <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0.5rem 0 0;">Foundation of Trustworthy Cloud Computing</p>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-network-wired"></i>
+                        <strong>Secure Distributed Systems</strong>
+                        <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0.5rem 0 0;">TEE-based anonymity networks & serverless</p>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-lock"></i>
+                        <strong>Privacy-Preserving MPC</strong>
+                        <p style="font-size: 0.9rem; color: var(--secondary-text); margin: 0.5rem 0 0;">Bioinformatics & federated learning</p>
+                    </div>
+                </div>
             </section>
-            
-            <!-- <section id="publications">
-                <h2>Publications</h2>
-                <ul class="publications-list">
-                    <li>
-                        <div class="pub-title">[Title of Your Publication] (2023)</div>
-                        <div class="pub-authors">[Your Name], [Co-author One], [Co-author Two]</div>
-                        <div>[Journal or Conference Name]. <a href="#">[PDF]</a> <a href="#">[Code]</a> <a href="#">[DOI]</a></div>
-                    </li>
-                    <li>
-                        <div class="pub-title">[Another Publication Title] (2022)</div>
-                        <div class="pub-authors">[Your Name], [Co-author Three]</div>
-                        <div>[Journal or Conference Name]. <a href="#">[PDF]</a> <a href="#">[Code]</a> <a href="#">[DOI]</a></div>
-                    </li>
-                    <li>
-                        <div class="pub-title">[Yet Another Publication] (2021)</div>
-                        <div class="pub-authors">[Co-author Four], [Your Name], [Co-author Five]</div>
-                        <div>[Journal or Conference Name]. <a href="#">[PDF]</a> <a href="#">[Code]</a> <a href="#">[DOI]</a></div>
-                    </li>
-                </ul>
-            </section> -->
-            
-            <!-- <section id="projects">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>[Project Name One]</h3>
-                        <p class="project-date">2022 - Present</p>
-                        <p>Brief description of the project, including its purpose, your role, 
-                        technologies used, and outcomes or current status.</p>
-                        <a href="#" class="project-link">Project Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="project-card">
-                        <h3>[Project Name Two]</h3>
-                        <p class="project-date">2021 - 2022</p>
-                        <p>Brief description of the project, including its purpose, your role, 
-                        technologies used, and outcomes or current status.</p>
-                        <a href="#" class="project-link">Project Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="project-card">
-                        <h3>[Project Name Three]</h3>
-                        <p class="project-date">2020 - 2021</p>
-                        <p>Brief description of the project, including its purpose, your role, 
-                        technologies used, and outcomes or current status.</p>
-                        <a href="#" class="project-link">Project Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </section> -->
-            
-            <!-- <section id="teaching">
-                <h2>Teaching</h2>
-                <div class="teaching-entries">
-                    <div class="teaching-entry">
-                        <h3>[Course Name]</h3>
-                        <p class="teaching-role">[Your Role], [Semester Year]</p>
-                        <p>Brief description of the course, your responsibilities, and any notable 
-                        achievements or innovations in your teaching approach.</p>
-                    </div>
-                    <div class="teaching-entry">
-                        <h3>[Another Course]</h3>
-                        <p class="teaching-role">[Your Role], [Semester Year]</p>
-                        <p>Brief description of the course, your responsibilities, and any notable 
-                        achievements or innovations in your teaching approach.</p>
-                    </div>
-                </div>
-            </section> -->
             
             <section id="contact">
                 <h2>Contact</h2>
