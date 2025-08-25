@@ -116,7 +116,7 @@
             My motivation is to advance secure systems from hardware through software, guided by the belief that trust must be a first-class property of modern computing. 
           </p>
         </div>
-        <h2> <a href="/website/news/" style="color: inherit">News</a> </h2>
+        <h2> <a style="color: inherit">News</a> </h2>
         <div class="news">
           <div class="table-responsive">
             <table class="table table-sm table-borderless">
@@ -235,7 +235,7 @@
           </ol>
         </div> -->
         <!-- END TEMPLATE FOR FUTURE -->
-        <h2> <a href="/website/publications/" style="color: inherit">Publications</a> </h2>
+        <h2> <a style="color: inherit">Publications</a> </h2>
         <div class="publications">
           <ol class="bibliography">
             <li>
@@ -279,21 +279,77 @@
             </li>
           </ol>
         </div>
-        <h2> <a href="/website/publications/" style="color: inherit">Research Projects (ongoing)</a> </h2>
+        <h2> <a style="color: inherit">Research Projects (ongoing)</a> </h2>
         <div class="publications">
           <ol class="bibliography">
             <li>
               <div class="row">
-                <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100"> <a href="https://sp2026.ieee-security.org/"
-                      rel="external nofollow noopener" target="_blank">TBD</a> </abbr> </div>
-                <div id="PhysRev.47.777" class="col-sm-8">
-                  <div class="title">DeadDrop: Responsible Disclosure of Smart Contract Bugs
+                <div class="col col-sm-2 abbr">
+                  <abbr class="badge rounded w-100">Project</abbr>
+                </div>
+                <div class="col-sm-8">
+                  <div class="title">DeadDrop: Privacy-Preserving Bug Bounty Platform for Smart Contracts</div>
+                  <div class="author">
+                    <b>Collaborators:</b> Yoshi Sato, Prof. Fan Zhang (Yale), PhD students from Yale, Cornell, and other institutions.
                   </div>
-                  <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> 
-                    <!-- <a href="/website/assets/pdf/example_pdf.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>  -->
+                  <div class="periodical">
+                    <b>Status:</b> Ongoing project. <br>
+                    <b>Role:</b> Lead technical implementation.<br>
+                    <b>Focus:</b> Using OMR cryptographic primitives and TEEs to secure multi-party bug retrieval
+                  </div>
+                  <div class="links">
+                    <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+                    <a href="https://github.com/hackingdecentralized/deaddrop" class="btn btn-sm z-depth-0" rel="external nofollow noopener" target="_blank">Code</a>
+                    <!-- <a href="link-to-slides-or-abstract.pdf" class="btn btn-sm z-depth-0" target="_blank">Slides</a> -->
+                    <!-- Add more links if available (e.g. video, code) -->
                   </div>
                   <div class="abstract hidden">
-                    <p> WRITE SOMETHING HERE</p>
+                    <p>
+                      Bug bounty programs are widely used to uncover software vulnerabilities, 
+                      but they face unique challenges in the context of smart contracts, where 
+                      pseudonymous authors and financial stakes complicate responsible disclosure. 
+                      We present DeadDrop, a system for oblivious bug reporting that combines 
+                      Oblivious Message Retrieval (OMR) with Trusted Execution Environments (TEEs). 
+                      DeadDrop allows researchers to submit vulnerability reports privately and 
+                      efficiently without exposing recipients or signaling the presence of bugs. 
+                      Our design includes techniques for long messages and a bug specification language, 
+                      and our prototype demonstrates that oblivious bug reporting for smart contracts 
+                      is both practical and efficient.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col col-sm-2 abbr">
+                  <abbr class="badge rounded w-100">Project</abbr>
+                </div>
+                <div class="col-sm-8">
+                  <div class="title">SC2: Serverless Confidential Containers</div>
+                  <div class="author">
+                    <b>Collaborators:</b> Yoshi Sato, Pierre-Louis Aublin (IIJ), Carlos Segarra (Imperial College London), and members of the LSDS Group.
+                  </div>
+                  <div class="periodical">
+                    <b>Status:</b> Ongoing project, presented in internal seminar.<br>
+                    <b>Role:</b> Research assistant and collaborator.<br>
+                    <b>Focus:</b> Enabling privacy-preserving serverless frameworks with knative, k8s, and confidential containers.
+                  </div>
+                  <div class="links">
+                    <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+                    <a href="https://github.com/sc2-sys" class="btn btn-sm z-depth-0" rel="external nofollow noopener" target="_blank">Code</a>
+                    <a href="/website/images/iijlab-seminar-sc2-presentation.pdf" class="btn btn-sm z-depth-0" rel="external nofollow noopener" target="_blank">Slides</a>
+                    <a href="https://www.iijlab.net/activities/seminars.html" class="btn btn-sm z-depth-0" rel="external nofollow noopener" target="_blank">Video</a>
+                  </div>
+                  <div class="abstract hidden">
+                    <p>Serverless computing offers elasticity and cost efficiency, while confidential VMs (CVMs) 
+                      provide strong hardware-backed isolation. Combining the two promises privacy-preserving 
+                      serverless platforms, but faces a fundamental challenge: CVMs incur high startup costs that 
+                      break the performance model of serverless. We present SC2, a prototype serverless platform 
+                      built with Knative, Kubernetes, and Confidential Containers. SC2 introduces a cache layer 
+                      that enables efficient warmup and reuse of CVMs, mitigating cold-start latency while preserving 
+                      confidentiality guarantees. Our early results demonstrate that caching can make 
+                      confidential serverless practical, opening a path toward scalable privacy-preserving cloud services.</p>
                   </div>
                 </div>
               </div>
@@ -315,12 +371,12 @@
     </div>
   </div>
   <footer class="fixed-bottom" role="contentinfo">
-    <div class="container mt-0"> © Copyright 2025 Yoshi Sato. Powered by <a href="https://jekyllrb.com/"
+    <!-- <div class="container mt-0"> © Copyright 2025 Yoshi Sato. Powered by <a href="https://jekyllrb.com/"
         target="_blank" rel="external nofollow noopener">Jekyll</a> with <a
         href="https://github.com/alshedivat/website" rel="external nofollow noopener" target="_blank">website</a>
       theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub
         Pages</a>. Photos from <a href="https://unsplash.com" target="_blank"
-        rel="external nofollow noopener">Unsplash</a>. </div>
+        rel="external nofollow noopener">Unsplash</a>. </div> -->
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
