@@ -32,6 +32,17 @@
   <script>
     initTheme();
   </script>
+
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h2 {
+    scroll-margin-top: 80px;
+  }
+</style>
+
 </head>
 
 <body class="fixed-top-nav ">
@@ -45,11 +56,18 @@
           <ul class="navbar-nav ml-auto flex-nowrap">
             <li class="nav-item active"> <a class="nav-link" href="/">about <span
                   class="sr-only">(current)</span> </a> </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#publications">publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">services</a>
+            </li>
             <!-- <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> -->
             <!-- <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> -->
             <!-- <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> -->
             <!-- <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> -->
-            <li class="nav-item "> <a class="nav-link" href="/images/Yoshi_Sato_CV_2025.pdf" rel="external nofollow noopener" target="_blank">cv </a> </li>
+            <li class="nav-item "> <a class="nav-link" href="/images/Yoshi_Sato_CV_2025.pdf" rel="external nofollow noopener" target="_blank">CV </a> </li>
             <!-- <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> -->
             <!-- <li class="nav-item "> <a class="nav-link" href="/people/">people </a> </li> -->
             <!-- <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -73,11 +91,15 @@
   </header>
   <div class="container mt-5" role="main">
     <div class="post">
+      <!-- WEBSITE HEADER -->
       <header class="post-header">
         <h1 class="post-title"> <span class="font-weight-bold">Yoshi</span> Sato </h1>
         <p class="desc">Undergraduate Researcher at <a href="#">Waseda University</a></p>
       </header>
+
+      <!-- WEBSITE CONTENT -->
       <article>
+        <!-- PROFILE PICTURE -->
         <div class="profile float-right">
           <figure>
             <picture>
@@ -94,6 +116,8 @@
             <p>Your City, State 12345</p> -->
           </div>
         </div>
+
+        <!-- BIOGRAPHY -->
         <div class="clearfix">
           <p>I am an undergraduate researcher at Waseda University. My research focuses on building 
             <b>privacy-preserving and trustworthy systems, spanning TEEs, confidential computing, and cryptographic protocols.</b> 
@@ -116,6 +140,8 @@
             My motivation is to advance secure systems from hardware through software, guided by the belief that trust must be a first-class property of modern computing. 
           </p>
         </div>
+
+        <!-- NEWS -->
         <h2> <a style="color: inherit">News</a> </h2>
         <div class="news">
           <div class="table-responsive">
@@ -152,6 +178,7 @@
             </table>
           </div>
         </div>
+
         <!-- TEMPLATE FOR FUTURE USE -->
         <!-- <h2> <a href="/blog/" style="color: inherit">latest posts</a> </h2>
         <div class="news">
@@ -239,7 +266,9 @@
           </ol>
         </div> -->
         <!-- END TEMPLATE FOR FUTURE -->
-        <h2> <a style="color: inherit">Publications</a> </h2>
+
+        <!-- PUBLICATIONS -->
+        <h2 id="publications"> <a style="color: inherit">Publications</a> </h2>
           <div class="publications">
             <ol class="bibliography">
               <!-- 1. DeadDrop (New Entry) -->
@@ -334,7 +363,8 @@
             </ol>
           </div>
 
-          <h2> <a style="color: inherit">Research Projects (ongoing)</a> </h2>
+        <!-- RESEARCH PROJECTS -->
+        <h2> <a style="color: inherit">Research Projects (ongoing)</a> </h2>
           <div class="publications">
             <ol class="bibliography">
               <!-- 1. SC2 Project -->
@@ -407,6 +437,39 @@
             </li>
             </ol>
           </div>
+
+        <!-- ACADEMIC SERVICES -->
+        <h2 id="services"> <a style="color: inherit">Academic Services</a> </h2>
+          <div class="publications">
+            <ol class="bibliography">
+
+              <!-- EuroSys AE -->
+              <li>
+                <div class="row">
+                  <div class="col col-sm-2 abbr">
+                    <abbr class="badge rounded w-100">Service</abbr>
+                  </div>
+
+                  <div class="col-sm-8">
+                    <div class="title">
+                      Artifact Evaluation Committee Member
+                    </div>
+
+                    <div class="author">
+                      The 21st European Conference on Computer Systems (EuroSys 2026), Fall Cycle
+                    </div>
+
+                    <div class="periodical">
+                      <em>Artifact Evaluation</em>, 2026.
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ol>
+          </div>
+
+        <!-- SOCIALS -->
         <div class="social">
           <div class="contact-icons"> 
               <a href="mailto:yoshi.sato@yale.edu" title="email"><i class="fa-solid fa-envelope"></i></a> 
